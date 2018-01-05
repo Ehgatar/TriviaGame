@@ -40,4 +40,3 @@ document.getElementById("picture").src = pictures[range];
 
 }
 
-//https://www.youtube.com/watch?v=C7NsIRhoWuE
