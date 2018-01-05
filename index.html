@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+<body>
+    
+<script>
+    function countDown(secs,elem) {
+        var element = document.getElementById(elem);
+        element.innerHTML = "Please wait for "+secs+" seconds";
+        if(secs < 1) {
+            clearTimeout(timer);
+            element.innerHTML = '<h2>Time is up!</h2>';
+        }
+        secs--;
+        var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+    }
+    </script>
+    <div id="status"></div>
+    <script>countDown(15,"status");</script>
+
+    <h1>Totally Trival Trivia!</h1>
+
+    <form id="quiz" name="quiz">
+
+    <p>How old is Barack Obama?</p>
+    <input type="radio" id="mc" name="question1" value="56" > 56<br>
+    <input type="radio" id="mc" name="question1" value="26" > 26<br>
+    <input type="radio" id="mc" name="question1" value="60" > 60<br>
+    <input type="radio" id="mc" name="question1" value="21" > 21<br>
+
+    <p>Who was the oldest elected President?</p>
+    <input type="radio" id="mc" name="question2" value="James Buchanan" > James Buchanan<br>
+    <input type="radio" id="mc" name="question2" value="Donald Trump" > Donald Trump<br>
+    <input type="radio" id="mc" name="question2" value="Ronald Reagan" > Ronald Reagan<br>
+    <input type="radio" id="mc" name="question2" value="Dwight D. Eisenhower" > Dwight D. Eisenhower<br>
+
+    <p>Who was the first President to appear on TV?</p>    
+    <input type="radio" id="mc" name="question3" value="Franklin D. Roosevelt" > Franklin D. Roosevelt<br>
+    <input type="radio" id="mc" name="question3" value="Dwight D. Eisenhower" > Dwight D. Eisenhower<br>
+    <input type="radio" id="mc" name="question3" value="John F. Kennedy" > John F. Kennedy<br>
+    <input type="radio" id="mc" name="question3" value="Harry S. Truman" > Harry S. Truman
+    <br>
+ 
+
+    <input id="button" type="button" value="I'm finished!" onclick="check();">
+
+
+</form>
+ 
+    <div id="after_submit">
+    <p id="message"></p>
+    <p id = "number_correct"> Hurry!</p>
+    <img id="picture">
+</div>
+
+</body>
+</html>
