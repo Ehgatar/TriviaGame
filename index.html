@@ -17,12 +17,14 @@
             clearTimeout(timer);
             element.innerHTML = '<h2>Time is up!</h2>';
         }
+    //    Can't figure out how to make my clock stop after cliclkimg my "button"
         secs--;
         var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
     }
     </script>
     <div id="status"></div>
     <script>countDown(15,"status");</script>
+<!-- <div id="game"> trying to put my game in a div to that I can create a dive for a start screen page, but not working -->
 
     <h1>Totally Trival Trivia!</h1>
 
@@ -49,7 +51,7 @@
  
 
     <input id="button" type="button" value="I'm finished!" onclick="check();">
-
+</div>
 
 </form>
  

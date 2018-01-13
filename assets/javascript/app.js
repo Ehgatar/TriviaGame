@@ -16,7 +16,7 @@ var correct = 0;
          correct++;
 }
 
-var messages = ["Great job!", "That's just okay", "You really need to do a better"];
+var messages = ["Great job!", "That's just okay", "You really need to do a better job"];
 var pictures = ["images/win.jpg", "images/meh.jpg", "images/lost.png"];
 //images folder is not in the correct spot. Had to move out of assets folder for file to be found. HELP! 
 
@@ -40,4 +40,3 @@ document.getElementById("picture").src = pictures[range];
 
 }
 
-//https://www.youtube.com/watch?v=C7NsIRhoWuE
